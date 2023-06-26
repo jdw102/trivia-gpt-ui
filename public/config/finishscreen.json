@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "message": "Geez Louise...",
+        "music": "despair.mp3"
+    },
+    {
+        "id": 2,
+        "message": "You can do better than that.",
+        "music": "badly.mp3"
+    },
+    {
+        "id": 3,
+        "message": "Ok, you're pretty smart.",
+        "music": "keep-the-groove.mp3"
+    },
+    {
+        "id": 4,
+        "message": "Genius!",
+        "music": "get-funky.mp3"
+    }
+]

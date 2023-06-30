@@ -52,11 +52,9 @@ export default function Home() {
         playGenSound();
         setTimeout(() => {
           playTheme();
-          console.log(data);
-          console.log(typeof data);
           if (typeof data === 'string') {
             try {
-              setTrivia(JSON.parse(data.slice(data.indexOf('['), data.length)))
+              setTrivia(JSON.parse(data.slice(data.indexOf('['), data.lastIndexOf(']') + 1)))
             }
             catch (error) {
               alert("Who let him cook!? Chat GPT did not like your input or glitched out! Please try again.");
@@ -75,7 +73,6 @@ export default function Home() {
         stopTheme();
       });
     }
-    console.log(trivia); 
   }
 
   const handleKeyDown = (e) => {
@@ -87,7 +84,6 @@ export default function Home() {
   const typeTheme = (e) => {
     setText(e.target.value);
   }
-  console.log(trivia == null);
 
   return (
     <div>

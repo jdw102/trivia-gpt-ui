@@ -5,7 +5,7 @@ import TriviaScreen from '../components/TriviaScreen';
 import axios from 'axios';
 import InfoIcon from '@mui/icons-material/Info';
 
-const BASE_URL = "http://jworthy1.pythonanywhere.com/play/";
+const BASE_URL = "https://jworthy1.pythonanywhere.com/play/";
 
 
 export default function Home() {

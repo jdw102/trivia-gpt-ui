@@ -41,7 +41,6 @@ const FinishScreen = ({correct, wrong, reset}) => {
     audio.currentTime = 0;  
     let result = null;
     let corr = parseInt(correct) / (parseInt(correct) + parseInt(wrong));
-    console.log(corr);
     if (corr >= 0 && corr <= 0.3) {
         result = data.find((d) => d.id == 1);
     }
@@ -55,7 +54,6 @@ const FinishScreen = ({correct, wrong, reset}) => {
         result = data.find((d) => d.id == 4);
     }
 
-    console.log(result);
     return (
         <Grid className = "finish-screen"container alignItems = "center" justifyContent="center">
             <Grid item xs = {12} align = "center">

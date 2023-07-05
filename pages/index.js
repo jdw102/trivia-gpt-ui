@@ -5,7 +5,9 @@ import TriviaScreen from '../components/TriviaScreen';
 import axios from 'axios';
 import InfoIcon from '@mui/icons-material/Info';
 
-const BASE_URL = "https://jworthy1.pythonanywhere.com/play/";
+const BASE_URL = process.env.API;
+const token = `${process.env.USERNAME}:${process.env.PASSWORD}`;
+const encodedToken = Buffer.from(token).toString('base64');
 
 
 export default function Home() {
@@ -45,9 +47,14 @@ export default function Home() {
   }
   const generate = () => {
     playClick();
+    let config = {
+      method: 'get',
+      url: BASE_URL + text + "/" + difficulty + "/" + amount,
+      headers: { 'Authorization': 'Basic '+ encodedToken }
+    };
     if (text !== '') {
       setLoading(true);
-      axios.get(BASE_URL + text + "/" + difficulty + "/" + amount).
+      axios(config).
       then(({data}) => {
         playGenSound();
         setTimeout(() => {

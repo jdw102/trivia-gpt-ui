@@ -89,7 +89,6 @@ export default function TriviaScreen({trivia, style, reset}) {
 
     const handleEnter = (text, index) => {
         setDisable(true);
-        console.log(text, answer);
         if (text  === answer) {
             setTriggerCheck(true);
             playCorrect();

@@ -6,12 +6,14 @@ import axios from 'axios';
 import InfoIcon from '@mui/icons-material/Info';
 require('dotenv').config()
 
-const BASE_URL = process.env.NEXT_PUBLIC_API;
-const token = `${process.env.NEXT_PUBLIC_USERNAME}:${process.env.NEXT_PUBLIC_PASSWORD}`;
-const encodedToken = Buffer.from(token).toString('base64');
+
 
 
 export default function Home() {
+
+  const BASE_URL = process.env.NEXT_PUBLIC_API;
+  const token = `${process.env.NEXT_PUBLIC_USERNAME}:${process.env.NEXT_PUBLIC_PASSWORD}`;
+  const encodedToken = Buffer.from(token).toString('base64');
 
   function playClick() {
     document.getElementById("button-click").play()

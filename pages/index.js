@@ -4,9 +4,10 @@ import { Button, Grid, CircularProgress, Modal, Box, Paper, IconButton, Tooltip 
 import TriviaScreen from '../components/TriviaScreen';
 import axios from 'axios';
 import InfoIcon from '@mui/icons-material/Info';
+require('dotenv').config()
 
-const BASE_URL = process.env.API;
-const token = `${process.env.USERNAME}:${process.env.PASSWORD}`;
+const BASE_URL = process.env.NEXT_PUBLIC_API;
+const token = `${process.env.NEXT_PUBLIC_USERNAME}:${process.env.NEXT_PUBLIC_PASSWORD}`;
 const encodedToken = Buffer.from(token).toString('base64');
 
 

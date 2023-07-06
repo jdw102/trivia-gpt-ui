@@ -11,6 +11,7 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.5",
     "axios": "^1.4.0",
+    "dotenv": "^16.3.1",
     "howler": "^2.2.3",
     "next": "latest",
     "react": "18.2.0",

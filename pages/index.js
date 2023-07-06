@@ -51,7 +51,7 @@ export default function Home() {
   const generate = () => {
     playClick();
     let config = {
-      method: 'get',
+      method: 'GET',
       url: BASE_URL + text + "/" + difficulty + "/" + amount,
       headers: { 'Authorization': 'Basic '+ encodedToken }
     };
